@@ -40,3 +40,21 @@ Checkout the deployed resource information
 ```sh
 kubectl describe svc api
 ```
+
+You should see output like the following:
+
+```sh
+Name:              api
+Namespace:         default
+Labels:            io.kompose.service=api
+Annotations:       kompose.cmd: kompose convert
+                   kompose.version: 1.22.0 (HEAD)
+Selector:          io.kompose.service=api
+Type:              ClusterIP
+IP:                10.111.116.103
+Port:              3000  3000/TCP
+TargetPort:        3000/TCP
+Endpoints:         
+Session Affinity:  None
+Events:            <none>
+```
